@@ -5,16 +5,16 @@ featureHTML =
 healthyHTML =
   '<div class="option my-2 d-flex w-100 align-items-center healthyCard"><div class="optionContent p-2"> <h4 class="m-0"> <i class="fa-solid fa-arrow-up-right-dots" style="font-size: 24px; color:#198754;"></i> Un Website Sanatos si Eficient</h4> <div class="secondaryText" style="display:hide;">Atat ajutarea experientei placute pe un site sanatos pentru utilizatori si personal, cat si posibilitatea integrarii de functionalitati (evenimente, sistem de monetizare, reconstruire a unei sectiuni a site-ului etc.), optimizare in functie de evolutia site-ului.</div> </div> </div>';
 processingHTML =
-  '<div class="total totalCard d-flex"> <div class="brut col "> <h4>Costul <br> (o singura data)</h4> Total:<span class="total">0</span>€ </div> <div class="totalMonthlyPayment col text-right "> <h4>Suport/Lunar</h4> Total:<span class="total">0</span>€ </div> </div><div class="paginatorButtons text-center my-2"><button class="buttonCustom m-1 backButton">Inapoi</button><button class="m-1 buttonCustom  nextButton">Urmatorul</button></div>';
+  '<div class="paginatorButtons text-center my-2"><button class="buttonCustom m-1 backButton">Inapoi</button><button class="m-1 buttonCustom  nextButton">Urmatorul</button></div>';
 formHTML =
-  '<form action="#" class="formRequest "> <div class="detailsPayment"></div> <div class="my-3"> <p> Nume Prenume</p> <input type="text" class="form-control mb-2" placeholder="Ionescu Denisa" required="required"> <p> Email</p> <input  type="text" class="form-control mb-2" placeholder="denisa.ionescu@example.ro" required="required"> <p> Telefon</p> <input  type="text" class="form-control mb-2" placeholder="0712 345 678" required="required"> <p> Nume Firma(Optional)</p> <input type="text" class="form-control mb-2" placeholder="ELTAND S.R.L."> <div class="text-center"><button class="buttonCustom my-2 sendButton">Trimite</button></div> </div> </form>';
+  '<form action="#" class="formRequest "> <div class="detailsPayment"></div> <div class="my-3"> <p> Nume Prenume</p> <input type="text" class="form-control mb-2" placeholder="Ionescu Denisa" required="required"> <p> Email</p> <input  type="text" class="form-control mb-2" placeholder="denisa.ionescu@example.ro" required="required"> <p> Telefon</p> <input  type="text" class="form-control mb-2" placeholder="0712 345 678" required="required"> <p> Nume Firma(Optional)</p> <input type="text" class="form-control mb-2" placeholder="ELTAND S.R.L."> <div class="text-center"> <span href="#" class="buttonCustom m-2 retry" style="cursor:pointer; padding:12px">Reface</span><button class="buttonCustom my-2 sendButton">Trimite</button></div> </div> </form>';
 features = {
   smsMarketing: {
     title: "SMS Marketing Management",
     pretImplementare: 1.49,
     pretMentenanta: 0,
     details:
-      "Posibilitatea de trimitere a textelor SMS cu intentia de a spori vanzarile. Plata serviciului se realizeaza la <span class='highlighted'>fiecare reincarcare</span>. ",
+      "Posibilitatea de trimitere a textelor SMS cu intentia de a <span class='highlighted'>spori vanzarile</span>. ",
   },
 
   supportChat: {
@@ -30,14 +30,14 @@ features = {
     pretImplementare: 13.99,
     pretMentenanta: 13.99,
     details:
-      "Implementarea unui generator de AWB perntru transportul produselor. Aceasta optiune asigura generarea gratuita a 15 AWB-uri pe luna. Pentru <span class='highlighted'>generari nelimitate de AWB-uri</span> se poate opta pentru un abonament de 10€/luna sau 99€/an",
+      "Implementarea unui generator de AWB perntru <span class='highlighted'>transportul</span> produselor.",
   },
 
   metodePlata: {
     title: "Sistem de realizare a platilor",
     pretImplementare: 6.99,
     pretMentenanta: 0,
-    details: "Implementarea unui sistem de realizare online a platilor",
+    details: "Implementarea unui sistem de realizare <span class='highlighted'>online</span> a platilor",
   },
 
 
@@ -46,15 +46,7 @@ features = {
     pretImplementare: 4.99,
     pretMentenanta: 0,
     details:
-      "Implementarea unui sistem de Newsletter si Mail Marketing. Pentru un numar de 1000 subscriberi, se pot trimite pana la 5000 mail-uri lunar. <span class='highlighted'>Pentru mai multi subscriberi</span>, se poate opta pentru varianta de 10€ in plus pentru fiecare 500 subscriberi care depasesc primii 1000, cu trimitere de mail-uri nelimitate.",
-  },
-
-  produseActive: {
-    title: "Adaugarea de produse pe website",
-    pretImplementare: 4.99,
-    pretMentenanta: 0,
-    details:
-      "Adaugarea primelor 20 produse pe website este gratuita, iar pentru mai multe produse, adaugarea acestora va fi  taxata cu <span class='highlighted'>5€ pentru fiecare 20 produse noi</span>.",
+      "Implementarea unui sistem de <span class='highlighted'>Newsletter</span> si <span class='highlighted'>Mail Marketing</span>.",
   },
 
   hosting: {
@@ -62,14 +54,22 @@ features = {
     pretImplementare: 24.99,
     pretMentenanta: 24.99,
     details:
-      "Plata acestui serviciu se realizeaza <span class='highlighted'>anual</span>.",
+      "Daca nu stii care serviciu de hosting este mai potrivit pentru tine, te ajutam noi.",
   },
   domeniu: {
     title: "Furnizarea domeniului pentru website",
     pretImplementare: 14.99,
     pretMentenanta: 14.99,
     details:
-      "Plata acestui serviciu se <span class='highlighted'> realizeaza anual.</span>",
+      "Numele website-ului tau.",
+  },
+
+  sistemRezervari: {
+    title: "Sistem pentru realizarea de programari/rezervari",
+    pretImplementare: 23.99,
+    pretMentenanta: 0,
+    details:
+      "Implementarea unui sistem prin care vizitatorii website-ului pot realiza programari sau pot rezerva sedinte/servicii",
   },
   optimizareSeo: {
     title: "Optimizarea SEO a produselor",
@@ -78,12 +78,12 @@ features = {
     details:
       "Optimizarea SEO a primelor 20 produse pe website este gratuita, iar pentru mai multe produse, optimizarea SEO a acestora va fi  taxata cu <span class='highlighted'>4.99€ pentru fiecare 20 produse noi</span>.",
   },
-  sistemRezervari: {
-    title: "Sistem pentru realizarea de programari/rezervari",
-    pretImplementare: 23.99,
+  produseActive: {
+    title: "Adaugarea de produse pe website",
+    pretImplementare: 4.99,
     pretMentenanta: 0,
     details:
-      "Implementarea unui sistem prin care vizitatorii website-ului pot realiza programari sau pot rezerva sedinte/servicii",
+      "Adaugarea primelor 20 produse pe website este gratuita, iar pentru mai multe produse, adaugarea acestora va fi  taxata cu <span class='highlighted'>5€ pentru fiecare 20 produse noi</span>.",
   },
 };
 
@@ -94,10 +94,10 @@ websiteTypes = {
     "sistemCurierat",
     "metodePlata",
     "mailMarketing",
-    "produseActive",
+    // "produseActive",
     "hosting",
     "domeniu",
-    "optimizareSeo",
+    // "optimizareSeo",
   ],
   pres: [
     "supportChat",
@@ -124,19 +124,20 @@ function calculateTotal(allCosts, periodCost) {
   for (price in periodCost) {
     totalPeriodCost += periodCost[price];
   }
-  jQuery(".customizeWebsite .total .brut .total").html(total.toFixed(2));
-  jQuery(".customizeWebsite .total .totalMonthlyPayment .total").html(
-    totalPeriodCost.toFixed(2)
-  );
-  return [total.toFixed(2), totalPeriodCost.toFixed(2)];
+
+  // return [total.toFixed(2), totalPeriodCost.toFixed(2)];
 }
 jQuery(".customizeWebsite .selectType").on("change", function () {
+  tab = jQuery(this).val();
+  initTabHandler(tab)
+})
+function initTabHandler(tab) {
   jQuery(".customizeWebsite .tabs .tab").each(function () {
     jQuery(this).hide();
     jQuery(this).html("");
   });
   page = 1;
-  tab = jQuery(this).val();
+
   if (tab == "other") {
     jQuery(".customizeWebsite ." + tab).html("");
     jQuery(".customizeWebsite ." + tab).show();
@@ -144,7 +145,7 @@ jQuery(".customizeWebsite .selectType").on("change", function () {
       "<a href='/contact'>Contacteaza-ne</a>"
     );
   } else {
-    clearCosts();
+    // clearCosts();
     jQuery(".customizeWebsite ." + tab).html("");
     jQuery(".customizeWebsite ." + tab).show();
     htmlTab = "";
@@ -174,13 +175,13 @@ jQuery(".customizeWebsite .selectType").on("change", function () {
       jQuery(".customizeWebsite ." + tab).append(addHTML);
     }
     jQuery(".customizeWebsite ." + tab).append(healthyHTML);
-    // jQuery(".customizeWebsite ." + tab).append(processingHTML);
+    jQuery(".customizeWebsite ." + tab).append(processingHTML);
     allCosts["site"] = jQuery(".customizeWebsite ." + tab).data("value");
 
     calculateTotal(allCosts, periodCost);
     paginator(tab);
   }
-});
+}
 jQuery(".customizeWebsite .tabs ").on(
   "change",
   ".featureCheckbox",
@@ -213,6 +214,10 @@ jQuery(".backButton").on("click", function () {
   jQuery(this).fadeOut();
   jQuery(".continueButton").fadeIn();
 });
+jQuery(".customizeWebsite").on("click", ".retry", function () {
+  console.log("clicked")
+  initTabHandler(jQuery(".customizeWebsite .selectType").val())
+})
 jQuery(".customizeWebsite").on("click", ".sendButton", function () {
   let validForm = true;
   url = "/wp-json/eltand/v1/sendEmail";
@@ -243,7 +248,7 @@ jQuery(".customizeWebsite").on("click", ".sendButton", function () {
     );
   }
 });
-
+let activePage = 1;
 function paginator(tab, activePage = 1) {
   lastPage = activePage;
   jQuery(".customizeWebsite .page").each(function () {
@@ -278,17 +283,22 @@ function paginator(tab, activePage = 1) {
           nameDetail = cost == "site" ? "Website" : features[cost].title;
           jQuery(".formRequest .detailsPayment").append(
             "<div class='w-100 d-flex secondaryText' style='border-bottom:1px dotted gray;'> <div class='w-50 text-left'>" +
-              nameDetail +
-              "</div><div class='w-50 text-right'>" +
-              allCosts[cost] +
-              "€</div></div>"
+            nameDetail +
+            "</div></div>"
           );
+          // jQuery(".formRequest .detailsPayment").append(
+          //   "<div class='w-100 d-flex secondaryText' style='border-bottom:1px dotted gray;'> <div class='w-50 text-left'>" +
+          //     nameDetail +
+          //     "</div><div class='w-50 text-right'>" +
+          //     allCosts[cost] +
+          //     "€</div></div>"
+          // );
         }
-        jQuery(".formRequest .detailsPayment").append(
-          "<div class='w-100 d-flex secondaryText' style='border-bottom:1px dotted gray;'> <div class='w-50 text-left'> Total </div><div class='w-50 text-right'>Estimativ " +
-            calculateTotal(allCosts, periodCost)[0] +
-            "€</div></div>"
-        );
+        // jQuery(".formRequest .detailsPayment").append(
+        //   "<div class='w-100 d-flex secondaryText' style='border-bottom:1px dotted gray;'> <div class='w-50 text-left'> Total </div><div class='w-50 text-right'>Estimativ " +
+        //     calculateTotal(allCosts, periodCost)[0] +
+        //     "€</div></div>"
+        // );
       }
       if (activePage < lastPage) {
         paginator(tab, activePage + 1);
