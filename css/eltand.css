@@ -1,0 +1,194 @@
+.customizeWebsite {
+    padding: 15px !important;
+    margin: auto;
+    color: #1d212f;
+    box-shadow: 18px 18px 30px 0 rgba(0, 0, 0, 0.43);
+    border-radius: 35px;
+    position: relative;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    font-family: IBM Plex Sans,
+        sans-serif;
+    ;
+    border-top: 35px solid #E84A5F;
+}
+
+.customizeWebsite h3 {
+    color: #fdfdfd;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.textPrimary {
+    font-size: 16px;
+    color: var(--bs-gray-700);
+    font-weight: 500;
+
+}
+
+.secondaryText {
+    font-size: 13px;
+    color: #887e7e;
+}
+
+.customizeWebsite select {
+    padding: 7px 40px 7px 12px;
+    width: 100%;
+    border: 1px solid #E8EAED;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 1px 3px -2px #9098A9;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    transition: all 150ms ease
+}
+
+.customizeWebsite input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    /* For iOS < 15 to remove gradient background */
+    /* Not removed via appearance */
+    margin: 0;
+    border-radius: 2px;
+}
+
+.customizeWebsite .checkboxContainer {
+    margin: 1rem;
+}
+
+.customizeWebsite select:focus {
+    border: 1px solid #e84a5f54;
+
+}
+
+.customizeWebsite select :required:invalid {
+    color: #5A667F
+}
+
+.customizeWebsite .ml-1 {
+    margin-left: 8px;
+}
+
+input[type=checkbox] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid rgb(195, 195, 195);
+    border-radius: 2px;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]::before {
+    border-radius: 2px;
+    border: #E84A5F 1px solid;
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+input[type="checkbox"]::before {
+    /* ...existing styles */
+
+    background-color: #E84A5F;
+    /* Windows High Contrast Mode */
+    /* background-color: CanvasText; */
+
+}
+
+.healthyCard {
+    background: #4ae89938;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.totalCard {
+    background-color: #e84a5f38;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.buttonCustom {
+    background-color: #E84A5F;
+    border-radius: 35px;
+    padding: 10px;
+    border: 0;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.buttonCustom:hover {
+    background-color: #ffffff;
+    color: #000;
+
+}
+
+.buttonCustom:active {
+    background-color: #ffffff;
+    color: #000;
+    border: 1px solid #000;
+
+}
+
+.buttonCustom:focus {
+    background-color: #ffffff;
+    color: #000;
+    border: 1px solid #000;
+
+}
+
+
+.highlighted {
+    background-color: #E84A5F2e;
+    border-radius: 6px;
+    color: #E84A5F;
+    font-weight: 600;
+    padding: 2px
+}
+
+.supportCard {
+    background-color: #2A363B;
+    border-radius: 20px;
+    color: #fdfdfd;
+    min-height: 50px;
+    padding: 15px;
+}
+
+.customizeWebsite a {
+    color: #E84A5F;
+}
+
+.customizeWebsite a:hover {
+    color: #e67382;
+}
+
+@media only screen and (max-width: 768) {
+    .customizeWebsite .checkboxContainer {
+        margin: 0.5rem;
+    }
+
+}
