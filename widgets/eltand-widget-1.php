@@ -72,8 +72,7 @@ class Eltand_Widget_1 extends \Elementor\Widget_Base
         <h3>Dificultati? Ai nevoie de ajutor?</h3>
         <hr>
         <p>Trimite mail la <a href="mailto:official@eltand.com">official@eltand.com</a> sau apeleaza la numerele
-            <br><a href="tel:0730186575">+40 730 186 575</a> - Adrian-Valentin Cavaleru
-            <br><a href="tel:0720817378">+40 720 817 378</a> - Oscar Constantin Dincu
+            <br><a href="tel:0750446970">+40 750 446 970</a> - Official Eltand
         </p>
     </div>
 </div>
