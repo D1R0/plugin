@@ -1,5 +1,7 @@
 const LoaderEtd = {
-    init: function () {
+  init: function () {
+    if (jQuery(".loader_etd").length) {
+
       this.path1 = document.getElementById("path1_etd");
       this.path2 = document.getElementById("path2_etd");
       this.etdLogoSvg = document.getElementById("etd_logo_svg_etd");
@@ -26,27 +28,28 @@ const LoaderEtd = {
         "transitionend",
         this.onImageTransitionEnd.bind(this)
       );
-    },
+    }
+  },
 
-    onPath2AnimationEnd: function () {
-      this.image.classList.add("visible_etd");
-      this.etdLogoSvg.classList.add("hidden_etd");
-    },
+  onPath2AnimationEnd: function () {
+    this.image.classList.add("visible_etd");
+    this.etdLogoSvg.classList.add("hidden_etd");
+  },
 
-    onImageTransitionEnd: function () {
-      this.loader.classList.add("hidden_etd");
-      this.image.classList.add("large");
+  onImageTransitionEnd: function () {
+    this.loader.classList.add("hidden_etd");
+    this.image.classList.add("large");
 
-      setTimeout(() => {
-        this.onLoaderTransitionEnd();
-      }, 1500);
-    },
+    setTimeout(() => {
+      this.onLoaderTransitionEnd();
+    }, 1500);
+  },
 
-    onLoaderTransitionEnd: function () {
-      this.loader.remove();
-    },
-  };
+  onLoaderTransitionEnd: function () {
+    this.loader.remove();
+  },
+};
 
-  document.addEventListener("DOMContentLoaded", function () {
-    LoaderEtd.init();
-  });
+document.addEventListener("DOMContentLoaded", function () {
+  LoaderEtd.init();
+});
