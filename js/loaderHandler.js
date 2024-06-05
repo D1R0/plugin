@@ -47,6 +47,7 @@ const LoaderEtd = {
 
   onLoaderTransitionEnd: function () {
     this.loader.remove();
+    ETD_Helper.init();
   },
 };
 

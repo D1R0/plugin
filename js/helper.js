@@ -1,11 +1,11 @@
 const ETD_Helper = {
-    init: function() {
+    init: function () {
         this.wrapLetters();
         this.attachEvents();
         this.reverseBurning();
     },
 
-    wrapLetters: function() {
+    wrapLetters: function () {
         var text = jQuery('#ETD_burningText h2').text();
         var letters = text.split('').map(letter => {
             if (letter === ' ') {
@@ -18,28 +18,24 @@ const ETD_Helper = {
         jQuery('#ETD_burningText h2').html(letters);
     },
 
-    startBurning: function() {
-        jQuery('#ETD_burningText h2 span').each(function(index) {
+    startBurning: function () {
+        jQuery('#ETD_burningText h2 span').each(function (index) {
             setTimeout(() => {
                 jQuery(this).removeClass('ETD_recover');
             }, index * 50);
         });
     },
 
-    reverseBurning: function() {
-        jQuery('#ETD_burningText h2 span').each(function(index) {
+    reverseBurning: function () {
+        jQuery('#ETD_burningText h2 span').each(function (index) {
             setTimeout(() => {
                 jQuery(this).addClass('ETD_recover');
             }, index * 50);
         });
     },
 
-    attachEvents: function() {
+    attachEvents: function () {
         jQuery('#ETD_burnButton').on('click', () => this.startBurning());
         jQuery('#ETD_reverseButton').on('click', () => this.reverseBurning());
     }
 };
-
-jQuery(document).ready(function() {
-    ETD_Helper.init();
-});
