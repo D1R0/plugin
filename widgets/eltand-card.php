@@ -122,10 +122,17 @@ class Eltand_Card extends \Elementor\Widget_Base
                 <img src="<?php echo esc_url($settings['target_media']['url']); ?>" alt="<?php echo esc_attr($settings['target_alt']); ?>">
             </div>
             <div class="details" data-augmented-ui>
-                <h2 id="modal-title">Online Store</h2>
+                <h3 id="modal-title">Online Store</h3>
                 <p id="modal-desc"><?php echo esc_html($settings['desc']); ?></p>
                 <br>
-                <a href="<?php echo esc_url($settings['target_link']); ?>" class="button_etd">Vezi detalii</a>
+                <?php
+                if ($settings['target_link'] != "" && $settings['target_link'] != "#" && $settings['target_link'] != "1") {
+                ?>
+                    <a href="<?php echo esc_url($settings['target_link']); ?>" class="button_etd">Vezi mai multe</a>
+                <?php
+                }
+                ?>
+
             </div>
     <?php
     }
