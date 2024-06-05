@@ -1,9 +1,6 @@
 jQuery(document).ready(function ($) {
-    // Check if the viewport width is 1024 pixels or less
     if (window.innerWidth <= 1024) {
         $("#etd_mmenu_parent nav").attr("id", "etd_mmenu");
-        $("#etd_mmenu_parent nav ul").css("display", "block"); // Changed from 'flow' to 'block' for correct display
-
         $("#etd_mmenu").mmenu({
             extensions: ['theme-black', 'border-none', 'fx-menu-slide', 'pagedim-black'],
             navbar: {
