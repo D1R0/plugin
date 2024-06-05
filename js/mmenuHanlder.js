@@ -1,26 +1,27 @@
+jQuery(document).ready(function ($) {
+    // Check if the viewport width is 1024 pixels or less
+    if (window.innerWidth <= 1024) {
+        $("#etd_mmenu_parent nav").attr("id", "etd_mmenu");
+        $("#etd_mmenu_parent nav ul").css("display", "block"); // Changed from 'flow' to 'block' for correct display
 
-jQuery("#etd_mmenu_parent nav").attr("id", "etd_mmenu")
-jQuery("#etd_mmenu_parent nav ul").css("display", "flow")
-jQuery("#etd_mmenu").mmenu({
-    // mmenu options here
-    extensions: ['theme-black', 'border-none', 'fx-menu-slide', 'pagedim-black'],
-    navbar: {
-        title: 'Eltand Navigation'
-    },
-    offCanvas: {
-        position: "left",
-        zposition: "front"
-    },
-    "theme": "dark",
-    "navbars": [
-        {
-            "position": "bottom",
-            "content": [
-                "<a class='fa fa-envelope' href='#/'></a>",
-                "<a class='fa fa-twitter' href='#/'></a>",
-                "<a class='fa fa-facebook' href='#/'></a>"
-            ]
-        }
-    ]
-
+        $("#etd_mmenu").mmenu({
+            extensions: ['theme-black', 'border-none', 'fx-menu-slide', 'pagedim-black'],
+            navbar: {
+                title: 'Eltand Navigation'
+            },
+            offCanvas: {
+                position: "left",
+                zposition: "front"
+            },
+            theme: "dark",
+            navbars: [{
+                position: "bottom",
+                content: [
+                    "<a class='fa fa-envelope' href='#/'></a>",
+                    "<a class='fa fa-twitter' href='#/'></a>",
+                    "<a class='fa fa-facebook' href='#/'></a>"
+                ]
+            }]
+        });
+    }
 });
