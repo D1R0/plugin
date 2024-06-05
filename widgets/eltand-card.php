@@ -122,7 +122,7 @@ class Eltand_Card extends \Elementor\Widget_Base
                 <img src="<?php echo esc_url($settings['target_media']['url']); ?>" alt="<?php echo esc_attr($settings['target_alt']); ?>">
             </div>
             <div class="details" data-augmented-ui>
-                <h3 id="modal-title">Online Store</h3>
+                <h3 id="modal-title"><?php echo esc_url($settings['target_title']); ?></h3>
                 <p id="modal-desc"><?php echo esc_html($settings['desc']); ?></p>
                 <br>
                 <?php
