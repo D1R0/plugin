@@ -13,11 +13,11 @@ const LoaderEtd = {
 
       this.path1.style.strokeDasharray = this.length1;
       this.path1.style.strokeDashoffset = this.length1;
-      this.path1.style.animation = "dash_etd 3s linear forwards";
+      this.path1.style.animation = "dash_etd 2s linear forwards";
 
       this.path2.style.strokeDasharray = this.length2 * 3;
       this.path2.style.strokeDashoffset = this.length2 * 3;
-      this.path2.style.animation = "dash_etd 2s linear forwards";
+      this.path2.style.animation = "dash_etd 1s linear forwards";
       this.path2.style.animationDelay = "0s";
 
       this.path2.addEventListener(
@@ -47,7 +47,6 @@ const LoaderEtd = {
 
   onLoaderTransitionEnd: function () {
     this.loader.remove();
-    ETD_Helper.init();
   },
 };
 
