@@ -39,16 +39,14 @@ const LoaderEtd = {
   onImageTransitionEnd: function () {
     this.loader.classList.add("hidden_etd");
     this.image.classList.add("large");
-
+    ETD_Helper.init();
     setTimeout(() => {
       this.onLoaderTransitionEnd();
-    }, 1500);
+    }, 1000);
   },
 
   onLoaderTransitionEnd: function () {
     this.loader.remove();
-    ETD_Helper.init();
-
   },
 };
 
