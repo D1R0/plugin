@@ -141,6 +141,7 @@
   padding: 10px 26px;
   border-radius: 12px;
   text-shadow: none;
+  color: white !important;
 }
 .etd_menu a:hover {
   background: white;
