@@ -6,7 +6,7 @@ const ETD_Helper = {
     },
 
     wrapLetters: function () {
-        var text = jQuery('#ETD_burningText h2').text();
+        var text = jQuery('#ETD_burningText h1').text();
         var letters = text.split('').map(letter => {
             if (letter === ' ') {
                 // This wraps spaces in a non-breaking space span to keep layout consistent
@@ -15,11 +15,11 @@ const ETD_Helper = {
                 return `<span class="ETD_span burn">${letter}</span>`;
             }
         }).join('');
-        jQuery('#ETD_burningText h2').html(letters);
+        jQuery('#ETD_burningText h1').html(letters);
     },
 
     startBurning: function () {
-        jQuery('#ETD_burningText h2 span').each(function (index) {
+        jQuery('#ETD_burningText h1 span').each(function (index) {
             setTimeout(() => {
                 jQuery(this).removeClass('ETD_recover');
             }, index * 50);
@@ -27,7 +27,7 @@ const ETD_Helper = {
     },
 
     reverseBurning: function () {
-        jQuery('#ETD_burningText h2 span').each(function (index) {
+        jQuery('#ETD_burningText h1 span').each(function (index) {
             setTimeout(() => {
                 jQuery(this).addClass('ETD_recover');
             }, index * 50);
