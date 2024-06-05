@@ -137,12 +137,12 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
-.etd_menu span {
+.etd_menu a {
   padding: 10px 26px;
   border-radius: 12px;
   text-shadow: none;
 }
-.etd_menu span:hover {
+.etd_menu a:hover {
   background: white;
   color: #000 !important;
   border-radius: 10px;
