@@ -595,4 +595,8 @@ input[type=checkbox]::before {
   z-index: 99;
   mix-blend-mode: difference;
   color: white;
+}
+
+.mm-menu a {
+  align-content: center;
 }/*# sourceMappingURL=eltand.css.map */
