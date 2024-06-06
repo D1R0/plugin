@@ -115,9 +115,20 @@ class Eltand_Card extends \Elementor\Widget_Base
     protected function render()
     {
         $settings = $this->get_settings_for_display();
-
+        $idElem = uniqid();
 ?>
-        <div id="window-pane" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
+        <style>
+            <?php if ($settings['theme_color'] != "") { ?>#custom_<?php echo $idElem; ?> {
+                filter: drop-shadow(0 0px 2px <?php echo $settings['theme_color'] ?>) !important;
+            }
+
+            #custom_<?php echo $idElem; ?>.details {
+                --aug-border-bg: <?php echo $settings['theme_color'] ?> !important;
+            }
+
+            <?php } ?>
+        </style>
+        <div id="window-pane custom_<?php echo $idElem; ?>" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
             <div class="handle" data-augmented-ui>
                 <span class="handle-details">
                     <a href="<?php echo esc_url($settings['target_link']); ?>" target="_blank" title="augmented-ui"><?php echo esc_html($settings['target_title']); ?></a>
@@ -140,15 +151,7 @@ class Eltand_Card extends \Elementor\Widget_Base
                 ?>
 
             </div>
-            <style>
-                #window-pane {
-                    filter: drop-shadow(0 0px 2px <?php echo $settings['theme_color'] ?>) !important;
-                }
 
-                #window-pane .details {
-                    --aug-border-bg: <?php echo $settings['theme_color'] ?> !important;
-                }
-            </style>
     <?php
     }
 }
