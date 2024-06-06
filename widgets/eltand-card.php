@@ -124,7 +124,7 @@ class Eltand_Card extends \Elementor\Widget_Base
                     .' . esc_attr($idElem) . ' {
                         filter: drop-shadow(0 0px 2px ' . esc_attr($settings['theme_color']) . ') !important;
                     }
-                    .' . esc_attr($idElem) . '.details {
+                    .' . esc_attr($idElem) . ' .details {
                         --aug-border-bg: ' . esc_attr($settings['theme_colore']) . ' !important;
                     }
                 </style>';
