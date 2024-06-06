@@ -121,11 +121,8 @@ class Eltand_Card extends \Elementor\Widget_Base
 
         if (!empty($settings['theme_color'])) {
             echo '<style>
-                    .' . esc_attr($idElem) . ' {
-                        filter: drop-shadow(0 0px 2px ' . esc_attr($settings['theme_color']) . ') !important;
-                    }
-                    .' . esc_attr($idElem) . ' .details {
-                        --aug-border-bg: ' . esc_attr($settings['theme_colore']) . ' !important;
+                    .' . esc_attr($idElem) . ' .handle {
+                        --aug-inlay-bg: ' . esc_attr($settings['theme_color']) . ';
                     }
                 </style>';
         }
