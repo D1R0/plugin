@@ -142,7 +142,7 @@ class Eltand_Card extends \Elementor\Widget_Base
               </div>
               <div class="details" data-augmented-ui>
                 <h3 id="modal-title">' . esc_html($settings['target_title']) . '</h3>
-                <p id="modal-desc">' . esc_html($settings['desc']) . '</p>
+                <p id="modal-desc">' .  $settings['desc'] . '</p>
                 <br>';
 
         if (!empty($settings['target_link']) && $settings['target_link'] !== "#" && $settings['target_link'] !== "1") {
