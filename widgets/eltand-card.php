@@ -122,7 +122,7 @@ class Eltand_Card extends \Elementor\Widget_Base
         if (!empty($settings['theme_color'])) {
             echo '<style>
                     .' . esc_attr($idElem) . ' .handle {
-                        --aug-inlay-bg: ' . esc_attr($settings['theme_color']) . ';
+                        --aug-inlay-bg: ' . esc_attr($settings['theme_color']) . ' !important;
                     }
                 </style>';
         }
