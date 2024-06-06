@@ -116,18 +116,17 @@ class Eltand_Card extends \Elementor\Widget_Base
     {
         $settings = $this->get_settings_for_display();
         $idElem = uniqid();
-?>
-        <style>
-            <?php if ($settings['theme_color'] != "") { ?>#custom_<?php echo $idElem; ?> {
-                filter: drop-shadow(0 0px 2px <?php echo $settings['theme_color'] ?>) !important;
-            }
+        if ($settings['theme_color'] != "") { ?>
+            <style>
+                #custom_<?php echo $idElem; ?> {
+                    filter: drop-shadow(0 0px 2px <?php echo $settings['theme_color'] ?>) !important;
+                }
 
-            #custom_<?php echo $idElem; ?>.details {
-                --aug-border-bg: <?php echo $settings['theme_color'] ?> !important;
-            }
-
-            <?php } ?>
-        </style>
+                #custom_<?php echo $idElem; ?>.details {
+                    --aug-border-bg: <?php echo $settings['theme_color'] ?> !important;
+                }
+            </style>
+        <?php } ?>
         <div id="window-pane custom_<?php echo $idElem; ?>" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
             <div class="handle" data-augmented-ui>
                 <span class="handle-details">
