@@ -77,7 +77,7 @@ class Eltand_Card extends \Elementor\Widget_Base
             'desc',
             [
                 'label' => __('Description', 'eltand'),
-                'type' => \Elementor\Controls_Manager::TEXTAREA,
+                'type' => \Elementor\Controls_Manager::WYSIWYG,
                 'default' => 'desc',
             ]
         );
@@ -92,7 +92,13 @@ class Eltand_Card extends \Elementor\Widget_Base
                 ],
             ]
         );
-
+        $this->add_control(
+            'theme_color',
+            [
+                'label' => __('Theme Color', 'eltand'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+            ]
+        );
         $this->add_control(
             'target_alt',
             [
@@ -123,17 +129,26 @@ class Eltand_Card extends \Elementor\Widget_Base
             </div>
             <div class="details" data-augmented-ui>
                 <h3 id="modal-title"><?php echo esc_html($settings['target_title']); ?></h3>
-                <p id="modal-desc"><?php echo esc_html($settings['desc']); ?></p>
+                <p id="modal-desc"><?php echo $settings['desc']; ?></p>
                 <br>
                 <?php
                 if ($settings['target_link'] != "" && $settings['target_link'] != "#" && $settings['target_link'] != "1") {
                 ?>
-                    <a href="<?php echo esc_url($settings['target_link']); ?>" class="button_etd">Vezi mai multe</a>
+                    <a href="<?php echo esc_url($settings['target_link']); ?>" class="button_etd" target="_blank">Vezi mai multe</a>
                 <?php
                 }
                 ?>
 
             </div>
+            <style>
+                #window-pane {
+                    filter: drop-shadow(0 0px 2px <?php echo $settings['theme_color'] ?>) !important;
+                }
+
+                #window-pane .details {
+                    --aug-border-bg: <?php echo $settings['theme_color'] ?> !important;
+                }
+            </style>
     <?php
     }
 }

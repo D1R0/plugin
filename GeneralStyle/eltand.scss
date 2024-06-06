@@ -121,7 +121,7 @@
   box-shadow: 0 0 6px 0 #d9d9d9;
 }
 
-.ETD_Button .elementor-button {
+.ETD_Button_scroll .elementor-button {
   background: rgb(30 30 30 / 59%);
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
@@ -347,7 +347,7 @@ h1 {
   color: var(--pallet3);
   text-shadow: 0 0 1vw var(--pallet2);
   font-size: 14px;
-  max-height: 25vh;
+  max-height: 40vh;
   overflow: auto;
 
   /* scrollbar */
