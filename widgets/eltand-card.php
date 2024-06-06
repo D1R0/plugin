@@ -115,42 +115,40 @@ class Eltand_Card extends \Elementor\Widget_Base
     protected function render()
     {
         $settings = $this->get_settings_for_display();
-        $idElem = uniqid();
-        if ($settings['theme_color'] != "") { ?>
-            <style>
-                #custom_<?php echo $idElem; ?> {
-                    filter: drop-shadow(0 0px 2px <?php echo $settings['theme_color'] ?>) !important;
-                }
+        $idElem = uniqid('custom_');
 
-                #custom_<?php echo $idElem; ?>.details {
-                    --aug-border-bg: <?php echo $settings['theme_color'] ?> !important;
-                }
-            </style>
-        <?php } ?>
-        <div id="window-pane custom_<?php echo $idElem; ?>" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
-            <div class="handle" data-augmented-ui>
+        echo '<div class="' . esc_attr($idElem) . '" id="window-pane" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">';
+
+        if (!empty($settings['theme_color'])) {
+            echo '<style>
+                    .' . esc_attr($idElem) . ' {
+                        filter: drop-shadow(0 0px 2px ' . esc_attr($settings['theme_color']) . ') !important;
+                    }
+                    .' . esc_attr($idElem) . '.details {
+                        --aug-border-bg: ' . esc_attr($settings['theme_colore']) . ' !important;
+                    }
+                </style>';
+        }
+
+        // HTML structure with escaping
+        echo '<div class="handle" data-augmented-ui>
                 <span class="handle-details">
-                    <a href="<?php echo esc_url($settings['target_link']); ?>" target="_blank" title="augmented-ui"><?php echo esc_html($settings['target_title']); ?></a>
-                    <a href="<?php echo esc_url($settings['creator_link']); ?>" target="_blank" title="Corset"><?php echo esc_html($settings['creator_title']); ?></a>
+                    <a href="' . esc_url($settings['target_link']) . '" target="_blank" title="augmented-ui">' . esc_html($settings['target_title']) . '</a>
+                    <a href="' . esc_url($settings['creator_link']) . '" target="_blank" title="Corset">' . esc_html($settings['creator_title']) . '</a>
                 </span>
-            </div>
-            <div class="img-frame" data-augmented-ui>
-                <img src="<?php echo esc_url($settings['target_media']['url']); ?>" alt="<?php echo esc_attr($settings['target_alt']); ?>">
-            </div>
-            <div class="details" data-augmented-ui>
-                <h3 id="modal-title"><?php echo esc_html($settings['target_title']); ?></h3>
-                <p id="modal-desc"><?php echo $settings['desc']; ?></p>
-                <br>
-                <?php
-                if ($settings['target_link'] != "" && $settings['target_link'] != "#" && $settings['target_link'] != "1") {
-                ?>
-                    <a href="<?php echo esc_url($settings['target_link']); ?>" class="button_etd" target="_blank">Vezi mai multe</a>
-                <?php
-                }
-                ?>
+              </div>
+              <div class="img-frame" data-augmented-ui>
+                <img src="' . esc_url($settings['target_media']['url']) . '" alt="' . esc_attr($settings['target_alt']) . '">
+              </div>
+              <div class="details" data-augmented-ui>
+                <h3 id="modal-title">' . esc_html($settings['target_title']) . '</h3>
+                <p id="modal-desc">' . esc_html($settings['desc']) . '</p>
+                <br>';
 
-            </div>
+        if (!empty($settings['target_link']) && $settings['target_link'] !== "#" && $settings['target_link'] !== "1") {
+            echo '<a href="' . esc_url($settings['target_link']) . '" class="button_etd" target="_blank">Vezi mai multe</a>';
+        }
 
-    <?php
+        echo '</div></div>';  // Closing divs
     }
 }
