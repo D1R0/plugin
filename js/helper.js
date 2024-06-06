@@ -1,31 +1,25 @@
 const ETD_Helper = {
     init: function () {
-        this.wrapWords();
+        this.wrapLetters();
         this.attachEvents();
         this.reverseBurning();
     },
 
-    wrapWords: function () {
+    wrapLetters: function () {
         var text = jQuery('#ETD_burningText h1').text();
-        var words = text.split(' ').map(word => {
-            return `<span class="ETD_word">${word.split('').map(letter => `<span class="ETD_span burn">${letter}</span>`).join('')}</span> `;
-        }).join('');
-        jQuery('#ETD_burningText h1').html(words);
-        this.adjustWordWrapping();
-    },
-
-    adjustWordWrapping: function () {
-        jQuery('#ETD_burningText h1 .ETD_word').each(function () {
-            var $word = jQuery(this);
-            if ($word.width() > jQuery('#ETD_burningText h1').width()) {
-                // Split word into characters if it's too wide
-                $word.html($word.text().split('').map(char => `<span class="ETD_span burn">${char}</span>`).join(''));
+        var letters = text.split('').map(letter => {
+            if (letter === ' ') {
+                // This wraps spaces in a span with a non-breaking space to allow breaks
+                return `<span class="ETD_span" style="white-space: pre-wrap;"> </span>`;
+            } else {
+                return `<span class="ETD_span burn">${letter}</span>`;
             }
-        });
+        }).join('');
+        jQuery('#ETD_burningText h1').html(letters);
     },
 
     startBurning: function () {
-        jQuery('#ETD_burningText h1 span.ETD_span').each(function (index) {
+        jQuery('#ETD_burningText h1 span').each(function (index) {
             setTimeout(() => {
                 jQuery(this).removeClass('ETD_recover');
             }, index * 50);
@@ -33,7 +27,7 @@ const ETD_Helper = {
     },
 
     reverseBurning: function () {
-        jQuery('#ETD_burningText h1 span.ETD_span').each(function (index) {
+        jQuery('#ETD_burningText h1 span').each(function (index) {
             setTimeout(() => {
                 jQuery(this).addClass('ETD_recover');
             }, index * 50);
@@ -42,6 +36,6 @@ const ETD_Helper = {
 
     attachEvents: function () {
         jQuery('#ETD_burnButton').on('click', () => this.startBurning());
-        jQuery('#ETD_reverse"Button').on('click', () => this.reverseBurning());
+        jQuery('#ETD_reverseButton').on('click', () => this.reverseBurning());
     }
 };
