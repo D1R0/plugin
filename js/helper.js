@@ -9,8 +9,7 @@ const ETD_Helper = {
         var text = jQuery('#ETD_burningText h1').text();
         var letters = text.split('').map(letter => {
             if (letter === ' ') {
-                // This wraps spaces in a span with a non-breaking space to allow breaks
-                return `<span class="ETD_span" style="white-space: pre-wrap;"> </span>`;
+                return `<span class="ETD_span" style="white-space: pre;">&nbsp;</span>`;
             } else {
                 return `<span class="ETD_span burn">${letter}</span>`;
             }
