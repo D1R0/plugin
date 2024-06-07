@@ -17,6 +17,7 @@ function my_custom_widget_enqueue_scripts()
     wp_enqueue_style('mmenu-style', plugins_url('assets/mmenujs/mmenu.css', __FILE__));
 
     wp_enqueue_script('jquery'); // Make sure jQuery is loaded
+    wp_enqueue_script('my-custom-widget-eltand', plugins_url('js/eltand.js', __FILE__), array('jquery'), '', true);
     wp_enqueue_script('my-custom-widget-helper', plugins_url('js/helper.js', __FILE__), array('jquery'), '', true);
     wp_enqueue_script('my-custom-widget-loader', plugins_url('js/loaderHandler.js', __FILE__), array('jquery'), '', true);
     wp_enqueue_script('my-custom-widget-random-fit', plugins_url('js/randomFitHandler.js', __FILE__), array('jquery'), '', true);

@@ -127,7 +127,6 @@ class Eltand_Card extends \Elementor\Widget_Base
                 </style>';
         }
 
-        // HTML structure with escaping
         echo '<div class="handle" data-augmented-ui>
                 <span class="handle-details">
                     <a href="' . esc_url($settings['target_link']) . '" target="_blank" title="augmented-ui">' . esc_html($settings['target_title']) . '</a>
@@ -145,7 +144,6 @@ class Eltand_Card extends \Elementor\Widget_Base
         if (!empty($settings['target_link']) && $settings['target_link'] !== "#" && $settings['target_link'] !== "1") {
             echo '<a href="' . esc_url($settings['target_link']) . '" class="button_etd" target="_blank">Vezi mai multe</a>';
         }
-
-        echo '</div></div>';  // Closing divs
+        echo '</div></div>';
     }
 }

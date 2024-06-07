@@ -1,13 +1,13 @@
 allCosts = { site: 0 };
 periodCost = { ElementorPro: 1.25 };
 featureHTML =
-  '<div class="option my-2 d-flex w-100 align-items-center"> <div class="checkboxContainer m-3"><input type="checkbox" class="featureCheckbox" data-value="%pretImplementare%" data-price-period="%pretMentenanta%" data-feature="%feature%"></div> <div class="optionContent"> <h4 class="m-0">%title%</h4> <div class="secondaryText" style="display:hide;">%details%</div> </div> <div class="ml-auto d-flex text-right w-25"> </div> </div> <hr>';
+  '<div class="option_etd my-2_etd d-flex_etd w-100_etd align-items-center_etd"> <div class="checkboxContainer_etd m-4_etd"><input type="checkbox" class="featureCheckbox_etd m-4_etd" data-value="%pretImplementare%" data-price-period="%pretMentenanta%" data-feature="%feature%"></div> <div class="optionContent_etd"> <p class="m-0_etd"><b>%title%</b></p> <div class="secondaryText_etd" style="display:hide;">%details%</div> </div> <div class="ml-auto_etd d-flex_etd text-right_etd w-25_etd"> </div> </div> <hr>';
 healthyHTML =
-  '<div class="option my-2 d-flex w-100 align-items-center healthyCard"><div class="optionContent p-2"> <h4 class="m-0"> <i class="fa-solid fa-arrow-up-right-dots" style="font-size: 24px; color:#198754;"></i> Un Website Sanatos si Eficient</h4> <div class="secondaryText" style="display:hide;">Atat ajutarea experientei placute pe un site sanatos pentru utilizatori si personal, cat si posibilitatea integrarii de functionalitati (evenimente, sistem de monetizare, reconstruire a unei sectiuni a site-ului etc.), optimizare in functie de evolutia site-ului.</div> </div> </div>';
+  '<div class="option_etd my-2_etd d-flex_etd w-100_etd align-items-center_etd healthyCard_etd supportCard_etd  my-3_etd"><div class="optionContent_etd p-2_etd"> <p class="m-0_etd"> <i class="fa-solid fa-arrow-up-right-dots" style="font-size: 24px; color:#198754;"></i> Un Website Sanatos si Eficient</p> <div class="secondaryText_etd" style="display:hide;">Atat ajutarea experientei placute pe un site sanatos pentru utilizatori si personal, cat si posibilitatea integrarii de functionalitati (evenimente, sistem de monetizare, reconstruire a unei sectiuni a site-ului etc.), optimizare in functie de evolutia site-ului.</div> </div> </div>';
 processingHTML =
-  '<div class="paginatorButtons text-center my-2"><button class="buttonCustom m-1 backButton">Inapoi</button><button class="m-1 buttonCustom  nextButton">Urmatorul</button></div>';
+  '<div class="paginatorButtons_etd text-center_etd my-2_etd"><button class="buttonCustom_etd m-1_etd backButton_etd elementor-button">Inapoi</button><button class="m-1_etd buttonCustom_etd nextButton_etd elementor-button">Urmatorul</button></div>';
 formHTML =
-  '<form action="#" class="formRequest "> <div class="detailsPayment"></div> <div class="my-3"> <p> Nume Prenume</p> <input type="text" class="form-control mb-2" placeholder="Ionescu Denisa" required="required"> <p> Email</p> <input  type="text" class="form-control mb-2" placeholder="denisa.ionescu@example.ro" required="required"> <p> Telefon</p> <input  type="text" class="form-control mb-2" placeholder="0712 345 678" required="required"> <p> Nume Firma(Optional)</p> <input type="text" class="form-control mb-2" placeholder="ELTAND S.R.L."> <div class="text-center"> <span href="#" class="buttonCustom m-2 retry" style="cursor:pointer; padding:12px">Reface</span><button class="buttonCustom my-2 sendButton">Trimite</button></div> </div> </form>';
+  '<form action="#" class="formRequest_etd"> <div class="detailsPayment_etd"></div> <div class="my-3_etd"> <p> Nume Prenume</p> <input type="text" class="form-control_etd mb-2_etd" placeholder="Ionescu Denisa" required="required"> <p> Email</p> <input  type="text" class="form-control_etd mb-2_etd" placeholder="denisa.ionescu@example.ro" required="required"> <p> Telefon</p> <input  type="text" class="form-control_etd mb-2_etd" placeholder="0712 345 678" required="required"> <p> Nume Firma(Optional)</p> <input type="text" class="form-control_etd mb-2_etd" placeholder="ELTAND S.R.L."> <div class="text-center_etd"> <span href="#" class="buttonCustom_etd m-2_etd retry_etd elementor-button" style="cursor:pointer; padding:12px">Reface</span><button class="buttonCustom_etd my-2_etd sendButton_etd elementor-button">Trimite</button></div> </div> </form>';
 features = {
   smsMarketing: {
     title: "SMS Marketing Management",
@@ -109,7 +109,7 @@ websiteTypes = {
 };
 
 function clearCosts() {
-  jQuery(".featureCheckbox").each(function () {
+  jQuery(".featureCheckbox_etd").each(function () {
     jQuery(this).prop("checked", false);
   });
   periodCost = { ElementorPro: 2 };
@@ -127,30 +127,29 @@ function calculateTotal(allCosts, periodCost) {
 
   // return [total.toFixed(2), totalPeriodCost.toFixed(2)];
 }
-jQuery(".customizeWebsite .selectType").on("change", function () {
+jQuery(".customizeWebsite_etd").on("change", ".selectType_etd", function () {
   tab = jQuery(this).val();
   initTabHandler(tab)
 })
 function initTabHandler(tab) {
-  jQuery(".customizeWebsite .tabs .tab").each(function () {
+  jQuery(".customizeWebsite_etd .tabs_etd .tab_etd").each(function () {
     jQuery(this).hide();
     jQuery(this).html("");
   });
   page = 1;
 
   if (tab == "other") {
-    jQuery(".customizeWebsite ." + tab).html("");
-    jQuery(".customizeWebsite ." + tab).show();
-    jQuery(".customizeWebsite ." + tab).append(
+    jQuery(".customizeWebsite_etd ." + tab + "_etd").html("");
+    jQuery(".customizeWebsite_etd ." + tab + "_etd").show();
+    jQuery(".customizeWebsite_etd ." + tab + "_etd").append(
       "<a href='/contact'>Contacteaza-ne</a>"
     );
   } else {
-    // clearCosts();
-    jQuery(".customizeWebsite ." + tab).html("");
-    jQuery(".customizeWebsite ." + tab).show();
+    jQuery(".customizeWebsite_etd ." + tab + "_etd").html("");
+    jQuery(".customizeWebsite_etd ." + tab + "_etd").show();
     htmlTab = "";
     pages = {};
-    pagesHTML = "<div class='page' data-page='%page%' style='display:none;'>";
+    pagesHTML = "<div class='page_etd' data-page='%page%' style='display:none;'>";
     websiteTypes[tab].forEach((feature, index) => {
       if (index % 3 === 0 && index !== 0) {
         page++;
@@ -171,67 +170,53 @@ function initTabHandler(tab) {
       pages[item].forEach((elem) => {
         addHTML += elem;
       });
-      addHTML += "</div";
-      jQuery(".customizeWebsite ." + tab).append(addHTML);
+      addHTML += "</div>";
+      jQuery(".customizeWebsite_etd ." + tab + "_etd").append(addHTML);
     }
-    jQuery(".customizeWebsite ." + tab).append(healthyHTML);
-    jQuery(".customizeWebsite ." + tab).append(processingHTML);
-    allCosts["site"] = jQuery(".customizeWebsite ." + tab).data("value");
+    jQuery(".customizeWebsite_etd ." + tab + "_etd").append(healthyHTML);
+    jQuery(".customizeWebsite_etd ." + tab + "_etd").append(processingHTML);
+    allCosts["site"] = jQuery(".customizeWebsite_etd ." + tab + "_etd").data("value");
 
     calculateTotal(allCosts, periodCost);
     paginator(tab);
   }
 }
-jQuery(".customizeWebsite .tabs ").on(
+
+jQuery(".customizeWebsite_etd .tabs_etd ").on(
   "change",
-  ".featureCheckbox",
+  ".featureCheckbox_etd",
   function () {
-    parent = jQuery(this).closest(".option");
+    parent = jQuery(this).closest(".option_etd");
     if (jQuery(this).is(":checked")) {
       allCosts[jQuery(this).data("feature")] = jQuery(this).data("value");
-      periodCost[jQuery(this).data("feature")] =
-        jQuery(this).data("price-period");
+      periodCost[jQuery(this).data("feature")] = jQuery(this).data("price-period");
       calculateTotal(allCosts, periodCost);
-      parent.find(".details").show();
+      parent.find(".secondaryText_etd").show();
     } else {
       delete allCosts[jQuery(this).data("feature")];
       delete periodCost[jQuery(this).data("feature")];
-      calculateTotal(allCosts, periodCost);
-      parent.find(".details").hide();
+      calculateType(allCosts, periodCost);
+      parent.find(".secondaryText_etd").hide();
     }
   }
 );
 
-jQuery(".continueButton").on("click", function () {
-  tab = jQuery(".customizeWebsite .selectType").val();
-  jQuery(".customizeWebsite ." + tab).fadeOut();
-  jQuery(this).fadeOut();
-  jQuery(".backButton").fadeIn();
-});
-jQuery(".backButton").on("click", function () {
-  tab = jQuery(".customizeWebsite .selectType").val();
-  jQuery(".customizeWebsite ." + tab).fadeIn();
-  jQuery(this).fadeOut();
-  jQuery(".continueButton").fadeIn();
-});
-jQuery(".customizeWebsite").on("click", ".retry", function () {
+jQuery(".customizeWebsite_etd").on("click", ".retry_etd", function () {
   console.log("clicked")
-  initTabHandler(jQuery(".customizeWebsite .selectType").val())
+  initTabHandler(jQuery(".customizeWebsite_etd .selectType_etd").val())
 })
-jQuery(".customizeWebsite").on("click", ".sendButton", function () {
+
+jQuery(".customizeWebsite_etd").on("click", ".sendButton_etd", function () {
   let validForm = true;
   url = "/wp-json/eltand/v1/sendEmail";
-  counter = 0;
   data = [];
   jQuery(this)
-    .closest(".customizeWebsite")
-    .find(".formRequest input")
+    .closest(".customizeWebsite_etd")
+    .find(".formRequest_etd input")
     .each(function () {
       data.push(jQuery(this).val());
-      if (jQuery(this).attr("required")) {
-        if (jQuery(this).val() == "") {
-          validForm = false;
-        }
+      if (jQuery(this).attr("required") && jQuery(this).val() == "") {
+        validForm = false;
       }
     });
   if (validForm) {
@@ -248,10 +233,10 @@ jQuery(".customizeWebsite").on("click", ".sendButton", function () {
     );
   }
 });
-let activePage = 1;
+
 function paginator(tab, activePage = 1) {
   lastPage = activePage;
-  jQuery(".customizeWebsite .page").each(function () {
+  jQuery(".customizeWebsite_etd .page_etd").each(function () {
     if (lastPage < jQuery(this).data("page")) {
       lastPage = jQuery(this).data("page");
     }
@@ -263,52 +248,40 @@ function paginator(tab, activePage = 1) {
   });
 
   if (activePage === lastPage) {
-    jQuery(".customizeWebsite .nextButton").text("Proceseaza");
+    jQuery(".customizeWebsite_etd .nextButton_etd").text("Proceseaza");
   } else {
-    jQuery(".customizeWebsite .nextButton").text("Urmatorul");
+    jQuery(".customizeWebsite_etd .nextButton_etd").text("Urmatorul");
   }
-  jQuery(".customizeWebsite .nextButton")
+  jQuery(".customizeWebsite_etd .nextButton_etd")
     .unbind()
     .click(function () {
       jQuery("html, body").animate(
-        { scrollTop: jQuery(this).closest(".customizeWebsite").offset().top },
+        { scrollTop: jQuery(this).closest(".customizeWebsite_etd").offset().top },
         250
       );
       if (activePage === lastPage) {
-        jQuery(".customizeWebsite ." + tab).html(formHTML);
-        jQuery(".formRequest form").before(
-          "<div class='detailsPayment w-100 text-left textPrimary'> <h4>Detalii</h4></div>"
+        jQuery(".customizeWebsite_etd ." + tab + "_etd").html(formHTML);
+        jQuery(".formRequest_etd").before(
+          "<div class='detailsPayment_etd w-100_etd text-left_etd textPrimary_etd'> <h4>Detalii</h4></div>"
         );
         for (cost in allCosts) {
           nameDetail = cost == "site" ? "Website" : features[cost].title;
-          jQuery(".formRequest .detailsPayment").append(
-            "<div class='w-100 d-flex secondaryText' style='border-bottom:1px dotted gray;'> <div class='w-50 text-left'>" +
+          jQuery(".formRequest_etd .detailsPayment_etd").append(
+            "<div class='w-100_etd d-flex_etd secondaryText_etd' style='border-bottom:1px dotted gray;'> <div class='w-50_etd text-left_etd'>" +
             nameDetail +
             "</div></div>"
           );
-          // jQuery(".formRequest .detailsPayment").append(
-          //   "<div class='w-100 d-flex secondaryText' style='border-bottom:1px dotted gray;'> <div class='w-50 text-left'>" +
-          //     nameDetail +
-          //     "</div><div class='w-50 text-right'>" +
-          //     allCosts[cost] +
-          //     "€</div></div>"
-          // );
         }
-        // jQuery(".formRequest .detailsPayment").append(
-        //   "<div class='w-100 d-flex secondaryText' style='border-bottom:1px dotted gray;'> <div class='w-50 text-left'> Total </div><div class='w-50 text-right'>Estimativ " +
-        //     calculateTotal(allCosts, periodCost)[0] +
-        //     "€</div></div>"
-        // );
       }
       if (activePage < lastPage) {
         paginator(tab, activePage + 1);
       }
     });
-  jQuery(".customizeWebsite .backButton")
+  jQuery(".customizeWebsite_etd .backButton_etd")
     .unbind()
     .click(function () {
       jQuery("html, body").animate(
-        { scrollTop: jQuery(this).closest(".customizeWebsite").offset().top },
+        { scrollTop: jQuery(this).closest(".customizeWebsite_etd").offset().top },
         250
       );
       if (activePage > 1) {

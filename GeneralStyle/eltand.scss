@@ -668,3 +668,104 @@ input {
 .mm-menu a {
   align-content: center;
 }
+
+/* Flexbox and Grid */
+.d-flex_etd {
+  display: flex;
+}
+
+.flex-wrap_etd {
+  flex-wrap: wrap;
+}
+
+.m-0_etd {
+  margin: 0 !important;
+}
+
+.col_etd {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.m-4_etd {
+  margin: 1rem;
+
+}
+
+/* Spacing */
+.py-2_etd {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.my-3_etd {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mt-4_etd {
+  margin-top: 1.5rem;
+}
+
+/* Text alignment */
+.text-right_etd {
+  text-align: right;
+}
+
+/* Width utility */
+.w-100_etd {
+  width: 100%;
+}
+
+/* Alignment */
+.align-items-center_etd {
+  align-items: center;
+}
+
+/* Typography */
+.textPrimary_etd {
+  color: #007bff;
+  /* This should be your primary color */
+}
+
+/* Tabs display */
+.tab_etd {
+  display: none;
+}
+
+/* Customizing form elements */
+.selectType_etd {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  appearance: none;
+}
+
+/* Specific overrides for custom named classes */
+.customizeWebsite_etd {
+  min-width: 200px;
+}
+
+.supportCard_etd {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Ensure styles for responsive columns */
+@media (min-width: 576px) {
+  .col-12_etd {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
