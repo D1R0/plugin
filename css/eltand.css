@@ -499,7 +499,7 @@ input[type=checkbox]::before {
 .highlighted {
   background-color: rgba(0, 255, 165, 0.1803921569);
   border-radius: 6px;
-  color: #00FFA5;
+  color: #009560;
   font-weight: 600;
   padding: 2px;
 }
