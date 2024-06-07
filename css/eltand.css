@@ -504,6 +504,13 @@ input[type=checkbox]::before {
   padding: 2px;
 }
 
+.buttonCustom_etd {
+  margin-right: 12px;
+}
+.buttonCustom_etd:hover {
+  color: #009560;
+}
+
 .supportCard {
   background-color: #2A363B;
   border-radius: 20px;
