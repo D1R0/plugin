@@ -438,6 +438,10 @@ h1 {
 }
 
 .customizeWebsite {
+  input {
+    width: 100%;
+  }
+
   select {
     padding: 7px 40px 7px 12px;
     width: 100%;
@@ -566,6 +570,10 @@ input {
   margin-right: 12px;
 
   &:hover {
+    color: #009560 !important;
+  }
+
+  &:active {
     color: #009560 !important;
   }
 }
