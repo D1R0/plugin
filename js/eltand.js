@@ -224,10 +224,11 @@ jQuery(".customizeWebsite_etd").on("click", ".sendButton_etd", function () {
       url,
       { data: data, allCosts: allCosts, periodCost: periodCost },
       function (response) {
+        console.log(response)
         if (response == "Email sent successfully") {
-          window.location.href = "https://eltand.com/thank-you";
+          // window.location.href = "https://eltand.com/thank-you";
         } else {
-          alert("Cererea a fost trimisa");
+          // alert("Cererea a fost trimisa");
         }
       }
     );
