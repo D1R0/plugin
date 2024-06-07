@@ -1,8 +1,8 @@
-jQuery(document).ready(function ($) {
+jQuery(document).ready(function () {
     if (window.innerWidth <= 1024) {
-        $("#etd_mmenu_parent nav").attr("id", "etd_mmenu");
-        $("#etd_mmenu_parent nav ul").css("display", "block");
-        $("#etd_mmenu").mmenu({
+        jQuery("#etd_mmenu_parent nav").attr("id", "etd_mmenu");
+        jQuery("#etd_mmenu_parent nav ul").css("display", "block");
+        jQuery("#etd_mmenu").mmenu({
             extensions: ['theme-black', 'border-none', 'fx-menu-slide', 'pagedim-black'],
             navbar: {
                 title: 'Eltand Navigation'
