@@ -398,6 +398,9 @@ h1 {
   color: #887e7e;
 }
 
+.customizeWebsite input {
+  width: 100%;
+}
 .customizeWebsite select {
   padding: 7px 40px 7px 12px;
   width: 100%;
@@ -508,6 +511,9 @@ input[type=checkbox]::before {
   margin-right: 12px;
 }
 .buttonCustom_etd:hover {
+  color: #009560 !important;
+}
+.buttonCustom_etd:focus {
   color: #009560 !important;
 }
 
