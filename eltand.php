@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Plugin Name: Eltand Core
- * Description: A plugin for internal business use to facilitate certain processes.
+ * Plugin Name: Eltand Elements 
+ * Description: Design Elements for your website.
  * Version:     1.0.0
  * Author:      Etland Development Team
  * Author URI:  https://eltand.com/
@@ -31,10 +31,12 @@ function register_eltand_widget($widgets_manager)
     require_once(__DIR__ . '/widgets/eltand-widget-1.php');
     require_once(__DIR__ . '/widgets/eltand-loader.php');
     require_once(__DIR__ . '/widgets/eltand-card.php');
+    require_once(__DIR__ . '/widgets/eltand-slider.php');
 
     $widgets_manager->register(new \Eltand_Widget_1());
     $widgets_manager->register(new \Eltand_Loader());
     $widgets_manager->register(new \Eltand_Card());
+    $widgets_manager->register(new \Eltand_Slider());
 }
 add_action('elementor/widgets/register', 'register_eltand_widget');
 
