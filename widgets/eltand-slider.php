@@ -63,7 +63,6 @@ class Eltand_Slider extends \Elementor\Widget_Base
                         'name' => 'link_elem',
                         'label' => esc_html__('Link', 'textdomain'),
                         'type' => \Elementor\Controls_Manager::TEXT,
-                        'default' => esc_html__('Link', 'textdomain'),
                         'label_block' => true,
                     ],
 
@@ -91,7 +90,7 @@ class Eltand_Slider extends \Elementor\Widget_Base
                                     <div class="slider_desc_etd">
                                         <h2 class="slider_title_etd">' . $item["title_elem"] . '</h2>
                                         <a class="button_etd" href="target" href="' . $item["link_elem"] . '">Acceseaza</a>
-                                    </div>';
+                                        </div>';
                             echo '</div>';
                         }
                     } ?>
