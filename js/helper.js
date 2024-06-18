@@ -126,11 +126,11 @@ jQuery('.slider_etd').each(function () {
         bulletArray.push($button);
     });
 
-    // $this.on('mouseenter', function () {
-    //     clearTimeout(timeout);
-    // }).on('mouseleave', function () {
-    //     advance();
-    // });
+    $this.on('mouseenter', function () {
+        clearTimeout(timeout);
+    }).on('mouseleave', function () {
+        advance();
+    });
 
-    // advance();
+    advance();
 });
