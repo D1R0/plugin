@@ -127,7 +127,7 @@ class Eltand_Card extends \Elementor\Widget_Base
                 </style>';
         }
 
-        echo '<div class="handle" data-augmented-ui>
+        echo '<div class="handle" data-augmented-ui id="' . strtolower(str_replace(' ', '_', $settings['target_title'])) . '">
                 <span class="handle-details">
                     <a href="' . esc_url($settings['target_link']) . '" target="_blank" title="augmented-ui">' . esc_html($settings['target_title']) . '</a>
                     <a href="' . esc_url($settings['creator_link']) . '" target="_blank" title="Corset">' . esc_html($settings['creator_title']) . '</a>
