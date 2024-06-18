@@ -90,7 +90,7 @@ class Eltand_Slider extends \Elementor\Widget_Base
                                     <div class="slider_overlay_etd"></div>
                                     <div class="slider_desc_etd">
                                         <h2 class="slider_title_etd">' . $item["title_elem"] . '</h2>
-                                        <a class="btn-primary_etd" href="target" href="' . $item["link_elem"] . '">Acceseaza</a>
+                                        <a class="button_etd" href="target" href="' . $item["link_elem"] . '">Acceseaza</a>
                                     </div>';
                             echo '</div>';
                         }
