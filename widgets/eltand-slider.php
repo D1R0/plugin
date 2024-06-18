@@ -61,9 +61,9 @@ class Eltand_Slider extends \Elementor\Widget_Base
                     ],
                     [
                         'name' => 'link_elem',
-                        'label' => esc_html__('Title', 'textdomain'),
+                        'label' => esc_html__('Link', 'textdomain'),
                         'type' => \Elementor\Controls_Manager::TEXT,
-                        'default' => esc_html__('Title', 'textdomain'),
+                        'default' => esc_html__('Link', 'textdomain'),
                         'label_block' => true,
                     ],
 
