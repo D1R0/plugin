@@ -62,6 +62,7 @@ class Eltand_Widget_1 extends \Elementor\Widget_Base
                     </p>
                 </div>
             </div>
+        </div>
 
     <?php
     }
